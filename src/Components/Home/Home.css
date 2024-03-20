@@ -1,0 +1,65 @@
+.Imgspinner{
+  width: 25rem;
+  height: 25rem;
+  border-radius: 20rem;
+}
+
+.mySpinner {
+  width: 9rem;
+  height: 9rem;
+  border: 1px solid;
+  border-radius: 50%;
+  position: relative;
+}
+ .mySpinner .circle-span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+#myResumeLink{
+  background-color: orange;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+#myResumeLink:hover {
+  background-color: transparent; /* Set background color to transparent on hover */
+}
+#myProjectLink{
+  background-color: red;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+#myProjectLink:hover {
+  background-color: transparent; /* Set background color to transparent on hover */
+}
+#myContactLink{
+  background-color: aquamarine;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+#myContactLink:hover {
+  background-color: transparent; /* Set background color to transparent on hover */
+}
+.typing-text {
+  opacity: 0;
+  animation: typing-hello 5s forwards;
+}
+
+@keyframes typing-hello {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.typing-animation {
+  overflow: hidden; /* Hide overflow */
+  display: inline-block; /* Display as inline-block to apply width */
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: typing 4s steps(40, end); /* Animation for typing effect */
+}
+
+@keyframes typing {
+  from { width: 0; } /* Start with no width */
+  to { width: 100%; } /* Gradually increase width to 100% */
+}
