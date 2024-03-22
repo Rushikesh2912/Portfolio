@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './Components/Home/Home';
-import Navbar from './Components/Navbar'
+import Navbar from './Components/Navbar/Navbar'
 import Resume from './Components/Resume/Resume';
 import Project from './Components/Project/Project';
 import Contact from './Components/Contact/Contact';
@@ -10,19 +10,18 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Footer from './Components/Footer';
+import Footer from './Components/Footer/Footer';
 function App() {
   return (
     <>
      <Router>
   <Navbar />
   <Routes>
-    <Route path="/home" element={<Home />} />
-    <Route path="/resume" element={<Resume />} />
-    <Route path="/project" element={<Project />} />
-    <Route path="/contact" element={<Contact />} />
+    <Route extact path="/home" element={<Home />} />
+    <Route extact path="/resume" element={<Resume />} />
+    <Route extact path="/project" element={<Project />} />
+    <Route extact path="/contact" element={<Contact />} />
   </Routes>
-  <hr className='container'/>
   <Footer/>
 </Router>
     </>

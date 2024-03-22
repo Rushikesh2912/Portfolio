@@ -1,7 +1,17 @@
-.Imgspinner{
+.Imgspinner {
   width: 25rem;
   height: 25rem;
   border-radius: 20rem;
+  box-shadow: 1.6px 1.7px 1.2px rgba(0, 0, 0, 0.044),
+    3.5px 3.7px 2.7px rgba(0, 0, 0, 0.065),
+    5.7px 6px 4.6px rgba(0, 0, 0, 0.08),
+    8.3px 8.7px 6.9px rgba(0, 0, 0, 0.093),
+    11.6px 12.2px 10px rgba(0, 0, 0, 0.105),
+    15.9px 16.7px 14.2px rgba(0, 0, 0, 0.117),
+    21.9px 23px 20.1px rgba(0, 0, 0, 0.13),
+    30.6px 32.2px 29.2px rgba(0, 0, 0, 0.145),
+    45.2px 47.6px 45px rgba(0, 0, 0, 0.166),
+    77px 81px 80px rgba(0, 0, 0, 0.21);
 }
 
 .mySpinner {
@@ -10,46 +20,57 @@
   border: 1px solid;
   border-radius: 50%;
   position: relative;
+  box-shadow: 2px 2.4px 19.2px rgba(0, 0, 0, 0.26),
+    4.5px 5.2px 34.6px rgba(0, 0, 0, 0.174),
+    7.7px 8.9px 45.9px rgba(0, 0, 0, 0.125),
+    12.3px 14.2px 53.4px rgba(0, 0, 0, 0.089),
+    19.3px 22.3px 58px rgba(0, 0, 0, 0.059),
+    32px 36.9px 63.8px rgba(0, 0, 0, 0.035),
+    65px 75px 98px rgba(0, 0, 0, 0.016);
 }
- .mySpinner .circle-span{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5rem;
+
+.mySpinner .circle-span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
 }
-#myResumeLink{
+
+#myContactLink{
+  background-color: rgb(255, 0, 247);
+  color: black;
+  transition: background-color 0.3s ease;
+}
+#myProjectLink{
+  background-color: rgb(0, 255, 204);
+  color: black;
+  transition: background-color 0.3s ease;
+}
+#myResumeLink {
   background-color: orange;
   color: black;
   transition: background-color 0.3s ease;
 }
-#myResumeLink:hover {
-  background-color: transparent; /* Set background color to transparent on hover */
-}
-#myProjectLink{
-  background-color: red;
-  color: black;
-  transition: background-color 0.3s ease;
-}
-#myProjectLink:hover {
-  background-color: transparent; /* Set background color to transparent on hover */
-}
-#myContactLink{
-  background-color: aquamarine;
-  color: black;
-  transition: background-color 0.3s ease;
-}
+
+#myResumeLink:hover,
+#myProjectLink:hover,
 #myContactLink:hover {
   background-color: transparent; /* Set background color to transparent on hover */
 }
+
 .typing-text {
   opacity: 0;
   animation: typing-hello 5s forwards;
 }
 
 @keyframes typing-hello {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .typing-animation {
@@ -60,6 +81,74 @@
 }
 
 @keyframes typing {
-  from { width: 0; } /* Start with no width */
-  to { width: 100%; } /* Gradually increase width to 100% */
+  from {
+    width: 0;
+  } /* Start with no width */
+  to {
+    width: 100%;
+  } /* Gradually increase width to 100% */
+}
+
+@media (max-width: 992px) {
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-sm-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .Imgspinner {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 16rem;
+  }
+
+  .mySpinner {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .mySpinner .circle-span {
+    font-size: 1.2rem;
+  }
+
+  .typing-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .Imgspinner {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 12rem;
+  }
+
+  .mySpinner {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .mySpinner .circle-span {
+    font-size: 1rem;
+  }
+
+  .typing-text {
+    font-size: 1rem;
+  }
 }
