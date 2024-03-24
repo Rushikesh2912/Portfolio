@@ -1,26 +1,50 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import img from '../Images/photo.png';
+import pic from '../Images/photo.jpg';
 import './Home.css';
 
 const Home = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollX;
+            const windowHeight = window.innerHeight;
+            const elementOffset = document.querySelector('.animate-on-scroll').offsetTop;
+
+            if (scrollPosition > elementOffset - windowHeight / 1.5) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <div className="container-fluid">
-            <div className="row vh-100 justify-content-center align-items-center">
-                <div className="col-lg-4 col-md-6 col-sm-8">
+            <div style={{}} className="row vh-200 justify-content-center align-items-center">
+                <div className={`col-lg-4 col-md-6 col-sm-8 animate-on-scroll ${isVisible ? 'fade-in-left' : ''}`}>
                     <div className="Imgspinner" role="status">
-                        <img src={img} alt="" style={{ width: '100%', borderRadius: '50%' }} />
+                        <img src={pic} alt="" style={{ width: '100%', borderRadius: '50%' }} />
                     </div>
                 </div>
 
-                <div className="col-lg-5 col-md-8 col-sm-12">
+                <div className={`col-lg-5 col-md-8 col-sm-12 animate-on-scroll ${isVisible ? 'fade-in-right' : ''}`}>
                     <h1 className="typping-text-hello" style={{ fontSize: '5rem', fontWeight: 'bold', marginBottom: '1rem' }}>
                         <span className="typing-animation">Hello...!</span>
                     </h1>
 
-                    <p style={{ fontSize: '1.4rem', marginBottom: 0, fontWeight: 900 }}>A Bit About Me</p>
+                    <p style={{ fontSize: '1.4rem', marginBottom: 0, fontWeight: 900 }} className="animate-on-scroll">
+                        A Bit About Me
+                    </p>
 
-                    <h5 className="typing-text" style={{ marginBottom: '3rem', fontFamily: 'monospace' }}>
+                    <h5 className="typing-text animate-on-scroll" style={{ marginBottom: '3rem', fontFamily: 'monospace' }}>
                         Software engineer passionate about creating innovative solutions to real-world problems. Experienced in full-stack web development, with expertise in MERN Stack.
                     </h5>
 
@@ -37,7 +61,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };

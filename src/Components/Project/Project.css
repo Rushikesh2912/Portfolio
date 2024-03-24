@@ -1,49 +1,64 @@
 #imageContainer {
-    width: 100%;
-    text-align: center;
-    border-radius: 2px solid black;
-  }
-  #imageContainer img {
-    box-shadow:
-    4.8px 3.1px 3px rgba(0, 0, 0, 0.044),
-    9.5px 6.1px 7.1px rgba(0, 0, 0, 0.057),
-    14.3px 9.2px 12.5px rgba(0, 0, 0, 0.068),
-    19.1px 12.3px 19.6px rgba(0, 0, 0, 0.079),
-    24.1px 15.5px 28.9px rgba(0, 0, 0, 0.091),
-    29.2px 18.8px 41.1px rgba(0, 0, 0, 0.105),
-    35px 22.5px 57.7px rgba(0, 0, 0, 0.119),
-    43.4px 27.9px 82.7px rgba(0, 0, 0, 0.134),
-    70px 45px 156px rgba(0, 0, 0, 0.15)
-  ;
-  }
-  
+  width: 100%;
+  text-align: center;
+  border-radius: 2px;
+}
+
+#imageContainer img {
+  box-shadow:
+      4.8px 3.1px 3px rgba(0, 0, 0, 0.044),
+      9.5px 6.1px 7.1px rgba(0, 0, 0, 0.057),
+      14.3px 9.2px 12.5px rgba(0, 0, 0, 0.068),
+      19.1px 12.3px 19.6px rgba(0, 0, 0, 0.079),
+      24.1px 15.5px 28.9px rgba(0, 0, 0, 0.091),
+      29.2px 18.8px 41.1px rgba(0, 0, 0, 0.105),
+      35px 22.5px 57.7px rgba(0, 0, 0, 0.119),
+      43.4px 27.9px 82.7px rgba(0, 0, 0, 0.134),
+      70px 45px 156px rgba(0, 0, 0, 0.15);
+}
+
 img {
-    height: 100%;
-    width: 100%;
-    border-radius: 2px solid black;
-    opacity: 0; /* Initially hide images */
-    transition: opacity 10s; /* Transition opacity over 3 seconds */
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  opacity: 0; /* Initially hide images */
+  transition: opacity 1s; /* Transition opacity over 1 second */
 }
 
 img.fade-in {
-    opacity: 5; /* Fade in images */
+  opacity: 1; /* Fade in images */
 }
 
-
-.project{
-    text-shadow:
-  0px 5.5px 3.3px rgba(0, 0, 0, 0.26),
-  0px 12.2px 6px rgba(0, 0, 0, 0.174),
-  0px 20.8px 8px rgba(0, 0, 0, 0.125),
-  0px 33.1px 9.3px rgba(0, 0, 0, 0.089),
-  0px 52px 10.1px rgba(0, 0, 0, 0.059),
-  0px 86.2px 11.1px rgba(0, 0, 0, 0.035),
-  0px 175px 17px rgba(0, 0, 0, 0.016)
-;
+.project {
+  text-shadow:
+      0px 5.5px 3.3px rgba(0, 0, 0, 0.26),
+      0px 12.2px 6px rgba(0, 0, 0, 0.174),
+      0px 20.8px 8px rgba(0, 0, 0, 0.125),
+      0px 33.1px 9.3px rgba(0, 0, 0, 0.089),
+      0px 52px 10.1px rgba(0, 0, 0, 0.059),
+      0px 86.2px 11.1px rgba(0, 0, 0, 0.035),
+      0px 175px 17px rgba(0, 0, 0, 0.016);
 }
-.description{
+
+.description {
   font-family: monospace;
 }
-b{
+
+b {
   font-size: 20px;
+}
+
+.project-section {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project-section.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.project-section.left {
+  transform: translateX(-100%);
 }

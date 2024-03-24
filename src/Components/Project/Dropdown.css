@@ -1,0 +1,63 @@
+.content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 1s ease, max-height 1s ease; /* Adjust transition duration */
+}
+
+.content.show {
+  opacity: 1;
+  max-height: 1000px; /* Set an appropriate max-height */
+}
+
+#imageContainer img {
+  box-shadow: 4.8px 3.1px 3px rgba(0, 0, 0, 0.044),
+    9.5px 6.1px 7.1px rgba(0, 0, 0, 0.057),
+    14.3px 9.2px 12.5px rgba(0, 0, 0, 0.068),
+    19.1px 12.3px 19.6px rgba(0, 0, 0, 0.079),
+    24.1px 15.5px 28.9px rgba(0, 0, 0, 0.091),
+    29.2px 18.8px 41.1px rgba(0, 0, 0, 0.105),
+    35px 22.5px 57.7px rgba(0, 0, 0, 0.119),
+    43.4px 27.9px 82.7px rgba(0, 0, 0, 0.134),
+    70px 45px 156px rgba(0, 0, 0, 0.15);
+}
+.my-btn {
+    box-shadow: 15.6px 0px 6.3px rgba(0, 0, 0, 0.15),
+                28.6px 0px 17.5px rgba(0, 0, 0, 0.181),
+                38.6px 0px 42.2px rgba(0, 0, 0, 0.203),
+                74px 0px 140px rgba(0, 0, 0, 0.22);
+    font-size: 22px;
+    border: 2px solid black;
+    border-radius: 50%; /* Makes the button circular */
+    color: white;
+    font-weight: 600;
+    width: 164px; /* Set the width and height as needed */
+    height: 164px;
+    background-color: orange;
+    color: black;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center; /* Horizontally center text */
+    align-items: center; /* Vertically center text */
+    cursor: pointer;
+  }
+  
+  .my-btn:hover {
+    background-color: transparent;
+  }
+  
+  .project-section {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .project-section.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .project-section.left {
+    transform: translateX(-100%);
+  }
+  

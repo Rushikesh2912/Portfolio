@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'; // Import your CSS file for Navbar styling
 
 const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <div className="navbar-container">
+        <div className={`navbar-container ${isScrolled ? 'scrolled' : ''}`}>
             <nav className="navbar navbar-expand-lg navbar-dark">
                 <div className="container">
                     <Link to='/home' className="navbar-brand fw-bold mx-2 d-flex align-items-center">

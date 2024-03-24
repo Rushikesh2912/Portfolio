@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Resume.css';
+// import file from '../Resume/Shinde_Rushikesh_Resume.pdf';
 
 const Resume = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,11 +26,11 @@ const Resume = () => {
     setHasLoaded(true);
   }, []);
 
-  const downloadResume = () => {
-    // Replace 'resume.pdf' with the path to your resume file
-    const fileUrl = '"D:\Portfolio\portfolio\src\Components\Resume\Shinde_Rushikesh_Resume.pdf"';
-    window.open(fileUrl, '_blank');
-  };
+  // const downloadResume = () => {
+  //   // Replace 'resume.pdf' with the path to your resume file
+  //   const fileUrl = '';
+  //   window.open(fileUrl, '_blank');
+  // };
 
   return (
     <div className="container">

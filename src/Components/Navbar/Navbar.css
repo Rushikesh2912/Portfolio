@@ -26,3 +26,11 @@ svg {
     font-size: 20px;
     color: white;
 }
+.navbar-container {
+    transition: transform 0.5s ease;
+}
+
+.scrolled {
+    transform: translateY(-100%);
+}
+
