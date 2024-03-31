@@ -1,0 +1,31 @@
+.mySpinner {
+    width: 9rem;
+    height: 9rem;
+    border: 1px solid;
+    border-radius: 50%;
+    position: relative;
+    background-color: orange;
+    box-shadow: 2px 2.4px 19.2px rgba(0, 0, 0, 0.26),
+      4.5px 5.2px 34.6px rgba(0, 0, 0, 0.174),
+      7.7px 8.9px 45.9px rgba(0, 0, 0, 0.125),
+      12.3px 14.2px 53.4px rgba(0, 0, 0, 0.089),
+      19.3px 22.3px 58px rgba(0, 0, 0, 0.059),
+      32px 36.9px 63.8px rgba(0, 0, 0, 0.035),
+      65px 75px 98px rgba(0, 0, 0, 0.016);
+      transition: background-color 0.3s ease;
+  }
+
+  .mySpinner .circle-span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+  }
+
+  .mySpinner:hover {
+    background-color: transparent;
+  }
+  .is-invalid {
+    border-color: #dc3545 !important;
+}

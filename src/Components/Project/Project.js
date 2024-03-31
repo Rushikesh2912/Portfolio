@@ -17,6 +17,7 @@ import T5 from '../Images/Tuser.png';
 import T6 from '../Images/Tpackage.png';
 import T7 from '../Images/Tupdate.png';
 import T8 from '../Images/Tusercreate.png';
+import projectImg from '../Images/ProjectDone.png'
 import Dropdown from './Dropdown';
 import { Link } from 'react-router-dom';
 
@@ -86,7 +87,9 @@ const Project = () => {
           <div className="col-sm-4 my-5 fade-in">
             <span className="project">Project's</span>
           </div>
-
+          <div className="col-md-4 offset-md-3 d-flex justify-content-center">
+           <img style={{width: '37rem'}} src={projectImg} alt="" />
+        </div>
         </div>
         <div className="row ">
           <div className="row">
@@ -113,7 +116,7 @@ const Project = () => {
           </div>
         </div>
 
-        <hr className="container m-5" />
+        <hr  style={{color:'orange'}} className="container m-5" />
 
         <div className="row project-section">
           <div className="col-md-6 my-4">
@@ -135,7 +138,7 @@ const Project = () => {
           </div>
         </div>
 
-        <hr className="container m-5" />
+        <hr  style={{color:'orange'}} className="container m-5" />
 
         <div className="row project-section">
           <div className="col-md-6 my-4">
@@ -156,7 +159,7 @@ const Project = () => {
             ))}
           </div>
         </div>
-        <hr className="container m-5" />
+        <hr  style={{color:'orange'}} className="container m-5" />
         <Dropdown/>
       </div>
 

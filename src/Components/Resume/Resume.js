@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Resume.css';
+import resumeImg from '../Images/resumeImg.png'
 // import file from '../Resume/Shinde_Rushikesh_Resume.pdf';
 
 const Resume = () => {
@@ -39,12 +40,11 @@ const Resume = () => {
         <div className={`col-md-4 my-5 ${isVisible ? 'fade-in' : ''}`}>
           <span className='resume'>Resume</span>
         </div>
-        <div className="col-md-4 offset-md-3 d-flex justify-content-center">
-        <button className="btn me-md-2 my-btn" type="button">
-                Resume <i className="fa-solid fa-download"></i>
-        </button>
+        <div className="col-md-4 offset-md-2">
+          <img style={{width: '37rem'}} src={resumeImg} alt="" />
         </div>
       </div>
+      <hr className='my-5' />
       <div className="row">
         <div className={`col-sm-4 text-center ${isVisible ? 'fade-in' : ''}`}>
           <p style={{ fontSize: '2rem', fontWeight: 700 }}>Work <br /><span>Experience</span></p>

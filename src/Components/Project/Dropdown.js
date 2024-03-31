@@ -57,7 +57,7 @@ const Dropdown = () => {
 
   return (
     <div className='project-section'>
-      <button className="btn me-md-2 my-btn" type="button" onClick={toggleContent}>
+      <button style={{width: '10rem', height: '10rem'}} className="btn me-md-2 my-btn" type="button" onClick={toggleContent}>
         {isVisible ? 'Hide Project' : 'Show More Project'}
         <i class="fas fa-chevron-down"></i>
       </button>

@@ -21,7 +21,7 @@ img {
   height: 100%;
   width: 100%;
   border-radius: 2px;
-  opacity: 0; /* Initially hide images */
+ 
   transition: opacity 1s; /* Transition opacity over 1 second */
 }
 

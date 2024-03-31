@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import pic from '../Images/photo.jpg';
+import pic from '../Images/om dada.jpg';
 import './Home.css';
 
 const Home = () => {
@@ -31,7 +31,7 @@ const Home = () => {
             <div style={{}} className="row vh-200 justify-content-center align-items-center">
                 <div className={`col-lg-4 col-md-6 col-sm-8 animate-on-scroll ${isVisible ? 'fade-in-left' : ''}`}>
                     <div className="Imgspinner" role="status">
-                        <img src={pic} alt="" style={{ width: '100%', borderRadius: '50%' }} />
+                        <img src={pic} alt="img..." style={{ width: '100%', borderRadius: '50%' }} />
                     </div>
                 </div>
 
